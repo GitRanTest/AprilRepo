@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="choiceapiFlow" doc:id="92de2366-0b3a-45ac-8ffe-ccba48f57a8c" >
 		<http:listener doc:name="Listener" doc:id="bb2a5b52-8b66-4511-b735-bd5fd8270451" config-ref="HTTP_Listener_config" path="/choice/{operation}/{num1}/{num2}"/>
-		<set-payload value="#[payload]" doc:name="Set Payload1" doc:id="a1063fa7-5a66-4657-9192-7b10e5f0836d" />
+		<set-payload value="#[payload]" doc:name="Set Payload2" doc:id="a1063fa7-5a66-4657-9192-7b10e5f0836d" />
 		<logger level="INFO" doc:name="Logger" doc:id="478a553a-58ca-4540-928f-98fe4e418439" message="#[attributes.uriParams.operation]"/>
 		<set-variable value="#[attributes.uriParams.operation]" doc:name="Set Variable" doc:id="404890eb-7972-4199-915e-be9fa6638d07" variableName="operationName"/>
 		<choice doc:name="Choice" doc:id="12dc0717-9fef-4200-b738-d4f54381d815" >
